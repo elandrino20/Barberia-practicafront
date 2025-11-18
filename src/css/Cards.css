@@ -1,0 +1,46 @@
+/* Separación superior personalizada */
+.card-section {
+  margin-top: 80px; /* Puedes ajustar este valor según tu diseño */
+}
+
+/* Imágenes uniformes */
+.uniform-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Hover y transición */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.hidden-text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-hover:hover .hidden-text {
+  opacity: 1;
+}
+
+/* Estilo elegante para el texto */
+.styled-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #f8f9fa;
+}
+
+.styled-text {
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.4;
+}

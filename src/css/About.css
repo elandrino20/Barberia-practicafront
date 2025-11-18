@@ -1,0 +1,49 @@
+.about-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cuadro negro */
+.about-box {
+  background-color: #111;
+  color: #e0e0e0;
+  border-radius: 16px;
+  padding: 50px 40px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  text-align: center;
+}
+
+/* Logo */
+.logo-area {
+  margin-bottom: 30px;
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #00ff88);
+}
+
+/* Título y texto */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+}

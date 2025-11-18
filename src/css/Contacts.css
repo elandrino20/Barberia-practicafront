@@ -1,0 +1,132 @@
+/* ===== PÁGINA DE CONTACTO ===== */
+.contact-page {
+  background-color: #ffffff; /* Fondo externo blanco */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== CUADRO PRINCIPAL ===== */
+.contact-box {
+  background-color: #111; /* Fondo oscuro interno */
+  color: #e0e0e0;
+  border-radius: 16px;
+  padding: 50px 40px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  text-align: center;
+}
+
+/* ===== TÍTULO Y TEXTO ===== */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+/* ===== INFORMACIÓN ===== */
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+/* ===== FORMULARIO ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px #00ff88;
+}
+
+/* ===== BOTÓN ===== */
+.contact-form button {
+  background-color: #00ff88;
+  color: #111;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00cc6f;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+/* ===== ÍCONOS SOCIALES ===== */
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #00ff88;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+/* ===== MEJORA DEL DESPLEGABLE (SELECT) ===== */
+.contact-form select {
+  color: #e0e0e0;
+  background-color: #1a1a1a;
+}
+
+/* Opciones del menú */
+.contact-form select option {
+  background-color: #111; /* Fondo del menú */
+  color: #00ff88; /* Texto visible */
+}
+
+/* Opción seleccionada */
+.contact-form select option:checked {
+  background-color: #00ff88;
+  color: #111;
+}
+
+/* Efecto flotante neón del menú (ligero brillo al abrir) */
+.contact-form select:focus {
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+}

@@ -1,0 +1,107 @@
+/* 🎨 Colores personalizados */
+:root {
+  --negro: #111111;
+  --verde-claro: #A8E6CF;
+  --blanco: #ffffff;
+}
+
+/* 🧱 Barra de navegación */
+.navbar {
+  background-color: var(--negro) !important; /* ✅ Fondo negro */
+  padding: 0.5rem 1rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 🖼️ Logo como imagen */
+.logo-image {
+  max-height: 68px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 🍔 Botón hamburguesa */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%); /* ✅ Blanco sobre fondo oscuro */
+}
+
+/* 🔗 Enlaces del menú */
+.navbar-nav .nav-link {
+  color: var(--blanco) !important; /* ✅ Texto blanco */
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--verde-claro) !important; /* ✅ Brilla verde claro */
+}
+
+/* 🔍 Buscador */
+.form-control {
+  background-color: var(--blanco);
+  border: 1px solid var(--verde-claro);
+  color: var(--negro);
+}
+
+.btn-outline-success {
+  background-color: var(--verde-claro);
+  color: var(--negro);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+/* 📱 Responsivo para móviles */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: var(--negro) !important;
+    padding: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+
+  .form-control {
+    margin-top: 0.5rem;
+  }
+
+  .logo-image {
+    max-height: 36px;
+  }
+
+  .navbar {
+    height: auto;
+  }
+}
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif; /* Fuente elegante */
+  font-weight: 600;                   /* Más gruesa */
+  font-size: 1rem;                    /* Tamaño legible */
+  color: var(--blanco) !important;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--verde-claro) !important;
+}

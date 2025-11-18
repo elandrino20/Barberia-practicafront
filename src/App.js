@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-
+import Home from "./view/Home";
+import Contacts from "./view/Contacts";
+import About from "./view/About";
+import Menu from "./components/Menu";
+import Footer from "./components/Footer"; // 👈 importamos el nuevo footer
+import Reservas from './view/Reservas';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="contactenos" element={<Contacts />} />
+        <Route path="nosotros" element={<About />} />
+        <Route path="Reservas" element={<Reservas />} />
+      </Routes>
+      <Footer /> {/* 👈 el footer se muestra en todas las páginas */}
     </div>
   );
 }

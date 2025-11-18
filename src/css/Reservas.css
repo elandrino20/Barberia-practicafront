@@ -1,0 +1,118 @@
+.citas-container {
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+  color: #111;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #00ff88;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+/* === FORMULARIO === */
+.cita-form {
+  background-color: #111;
+  color: #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.cita-form h2 {
+  color: #00ff88;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.cita-form input,
+.cita-form select {
+  padding: 10px;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  outline: none;
+}
+
+.cita-form select option {
+  background-color: #111;
+  color: #00ff88;
+}
+
+.cita-form button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #00ff88;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cita-form button:hover {
+  background-color: #00cc70;
+}
+
+/* === TABLA === */
+.table-container {
+  background-color: #111;
+  color: #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.table-container h2 {
+  color: #00ff88;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+th {
+  color: #00ff88;
+  text-transform: uppercase;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.edit-btn:hover {
+  color: #00ff88;
+}
+
+.delete-btn:hover {
+  color: #ff5555;
+}
