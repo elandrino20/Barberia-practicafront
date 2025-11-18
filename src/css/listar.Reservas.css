@@ -14,7 +14,7 @@
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* evita scroll horizontal */
+  overflow-x: hidden; /* evita scroll horizontal que corte menú/footer */
 }
 
 /* Título */
@@ -31,12 +31,14 @@
 /* ================= Tabla ================= */
 .reservas-table {
   width: 100%;
+  max-width: 100%;       /* nunca más ancha que la pantalla */
   border-collapse: collapse;
   margin-top: 1rem;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
   border-radius: 8px;
-  overflow-x: auto; /* permite scroll horizontal si es necesario */
+  overflow-x: auto;      /* scroll interno si hay contenido muy grande */
+  display: block;        /* importante para móviles */
 }
 
 .reservas-table th,
@@ -175,19 +177,23 @@ footer {
 
   .reservas-table tr {
     display: block;
+    width: 100%;
     margin-bottom: 15px;
     border: 2px solid #0f0;
     border-radius: 8px;
     padding: 10px;
     background-color: #fff;
+    box-sizing: border-box;
   }
 
   .reservas-table td {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 6px 0;
     border: none;
     border-bottom: 1px solid #eee;
+    box-sizing: border-box;
   }
 
   .reservas-table td::before {
