@@ -19,10 +19,11 @@ const Reservas = () => {
     hora: '',
   });
 
+  // Obtener reservas
   useEffect(() => {
     const fetchReservas = async () => {
       try {
-        const res = await fetch('http://localhost:4000/api/citas');
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/citas`);
         if (!res.ok) throw new Error('Error al cargar citas');
         const data = await res.json();
         setReservas(data);
@@ -69,7 +70,7 @@ const Reservas = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:4000/api/citas/${reservaSeleccionada._id}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/citas/${reservaSeleccionada._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -95,7 +96,7 @@ const Reservas = () => {
     }
 
     try {
-      await fetch(`http://localhost:4000/api/citas/${reservaSeleccionada._id}`, { method: 'DELETE' });
+      await fetch(`${process.env.REACT_APP_API_URL}/api/citas/${reservaSeleccionada._id}`, { method: 'DELETE' });
       setReservas(reservas.filter(r => r._id !== reservaSeleccionada._id));
       setShowEliminarModal(false);
       alert("Cita cancelada ✔️");
@@ -214,3 +215,4 @@ const Reservas = () => {
 };
 
 export default Reservas;
+
