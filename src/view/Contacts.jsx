@@ -22,7 +22,8 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:4000/api/citas', {
+      // Usando variable de entorno para la URL del backend
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/citas`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -30,7 +31,7 @@ const Contact = () => {
 
       if (!res.ok) throw new Error('Error al crear la cita');
 
-      // Guardar el correo del usuario para permitirle borrar solo sus citas
+      // Guardar el correo del usuario
       localStorage.setItem("userEmail", formData.correo);
 
       alert('✅ ¡Cita agendada con éxito!');
@@ -53,7 +54,6 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <div className="contact-box">
-
         <h1 className="contact-title">Contáctanos</h1>
         <p className="contact-text">
           ¿Quieres agendar una cita, conocer nuestros servicios o simplemente hablar con nosotros?
@@ -78,7 +78,6 @@ const Contact = () => {
           </a>
         </div>
 
-        {/* FORMULARIO */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <h2>Agendar tu cita</h2>
 
