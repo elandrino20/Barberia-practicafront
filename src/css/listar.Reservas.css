@@ -1,6 +1,8 @@
 /* ================= Box-sizing global ================= */
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* ================= Contenedor Principal ================= */
@@ -10,7 +12,9 @@
   color: #111;
   font-family: 'Urbanist', 'Segoe UI', sans-serif;
   min-height: 100vh;
-  overflow: visible; /* permite que el menú se vea completo */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* evita scroll horizontal */
 }
 
 /* Título */
@@ -32,7 +36,7 @@
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto; /* permite scroll horizontal si es necesario */
 }
 
 .reservas-table th,
@@ -140,10 +144,14 @@
   gap: 10px;
 }
 
-/* ================= Menú ================= */
-.menu {
-  position: relative; /* o fixed según tu diseño */
-  z-index: 2000;      /* se asegura que esté sobre todo */
+/* ================= Menú y Footer ================= */
+.menu,
+footer {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative; /* ajustable a fixed/sticky según tu diseño */
+  z-index: 2000;
 }
 
 /* ================= Responsividad ================= */
