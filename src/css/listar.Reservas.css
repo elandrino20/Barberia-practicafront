@@ -1,3 +1,8 @@
+/* ================= Box-sizing global ================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* ================= Contenedor Principal ================= */
 .reservas-container {
   padding: 2rem;
@@ -5,6 +10,7 @@
   color: #111;
   font-family: 'Urbanist', 'Segoe UI', sans-serif;
   min-height: 100vh;
+  overflow: visible; /* permite que el menú se vea completo */
 }
 
 /* Título */
@@ -132,6 +138,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* ================= Menú ================= */
+.menu {
+  position: relative; /* o fixed según tu diseño */
+  z-index: 2000;      /* se asegura que esté sobre todo */
 }
 
 /* ================= Responsividad ================= */
